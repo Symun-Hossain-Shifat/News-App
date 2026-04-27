@@ -1,4 +1,6 @@
 import Leftpage from "@/components/leftbar";
+import Middlebar from "@/components/middlebar";
+import Rightbar from "@/components/rightbar";
 
 export default async function Home() {
     
@@ -18,7 +20,7 @@ export default async function Home() {
 
 return (
    <div className="grid grid-cols-12 container mx-auto gap-3">
-    <div className="col-span-3 border-2 space-y-2 p-3">
+    <div className="col-span-3 bg-gray-50 rounded-sm space-y-2 p-3">
       
       <Leftpage  Data = {Data} ></Leftpage>
   
@@ -26,24 +28,16 @@ return (
     </div>
     
     
-    <div className="col-span-6 border-2 space-y-2 p-3">
-      <h1 className="text-xl font-semibold">All News</h1>
-      <div className="flex flex-col space-y-2 p-3">
-        {Newdata.map( D => {
-          return (
-            <div key={D._id}>
-              <h2>{D.title}</h2>
-            </div>
-                 );
-        })}
-      </div>
-
+    <div className="col-span-6 bg-gray-50 rounded-sm space-y-2 p-3">
+      <Middlebar Newdata = {Newdata}></Middlebar>
 
 
 
     </div>
-    <div className="col-span-3 border-2"></div>
-
+    <div className="col-span-3  bg-gray-50 rounded-sm p-3 space-y-2 ">
+      <Rightbar></Rightbar>
+    </div>
+    
 
    </div>
   );
