@@ -1,5 +1,6 @@
 import Headerpage from '@/components/header'
 import MenuPage from '@/components/menu'
+import Navbarpage from '@/components/Navbar'
 import React from 'react'
 
 function layoutpage ({children}) {
@@ -7,6 +8,7 @@ function layoutpage ({children}) {
     <>
     <Headerpage></Headerpage>
    <MenuPage></MenuPage>
+   <Navbarpage></Navbarpage>
    {children}
     </>
    
