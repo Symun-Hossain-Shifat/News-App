@@ -11,7 +11,7 @@ function Middlebar ({Newdata}) {
           return (
             <div className='border-2 p-5' key={D._id}>
               <h2>{D.title}</h2>
-              <Link href={`/Detailspage/${D.category_id}`}>See Details</Link>
+              <Link className='btn btn-accent text-white' href={`/Detailspage/${D._id}`}>See Details</Link>
             </div>
                  );
         })) : <p className='font-bold text-3xl h-screen text-center'>No Data Found </p>} 
