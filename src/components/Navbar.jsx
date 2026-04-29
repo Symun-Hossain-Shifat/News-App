@@ -8,7 +8,7 @@ import Image from 'next/image';
 function Navbarpage () {
     const [btn , setBtn ] = useState('home');
   return (
-    <div className='grid grid-cols-3 gap-3 items-center container mx-auto' >
+    <div className='grid grid-cols-1  md:grid-cols-3 gap-3 items-center container mx-auto' >
        <div></div>
         
         
@@ -23,7 +23,7 @@ function Navbarpage () {
 
 
 
-        <div className='flex justify-end gap-2 mr-3'>
+        <div className='flex justify-center md:justify-end gap-2 mr-3'>
           <Image src={user} alt="" />
           <button className='bg-black py-3 px-8 btn text-white'>Login</button>
 

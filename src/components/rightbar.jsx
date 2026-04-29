@@ -62,9 +62,9 @@ function Rightbar () {
         
 
         <div className='items-center justify-center space-y-2' >
-           <Image src={swimming} alt="" />
-           <Image src= {playground} alt="" />
-           <Image src={room} alt="" />
+           <Image className='mx-auto' src={swimming} alt="" />
+           <Image className='mx-auto' src= {playground} alt="" />
+           <Image className='mx-auto' src={room} alt="" />
         </div>
         
          </div>
