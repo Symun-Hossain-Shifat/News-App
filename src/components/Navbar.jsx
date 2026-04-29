@@ -25,7 +25,10 @@ function Navbarpage () {
 
         <div className='flex justify-center md:justify-end gap-2 mr-3'>
           <Image src={user} alt="" />
-          <button className='bg-black py-3 px-8 btn text-white'>Login</button>
+          <Link href={'/signup'}>
+           <button className='bg-black py-3 px-8 btn text-white'>Login</button>
+          </Link>
+         
 
 
 
