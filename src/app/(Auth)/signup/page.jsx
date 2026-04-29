@@ -2,19 +2,36 @@
 
 
 import React from 'react'
+import { authClient } from '../../../lib/auth-client'
 
-function Signuppage () {
+ function Signuppage () {
 
 
-  const Handlesignup = (e) => {
+  const Handlesignup = async (e) => {
      e.preventDefault()
      const form = e.target
+     const username = form.username.value
      const email = form.email.value
      const password = form.password.value
      console.log(email , password)
+
+
+
+
+
+      const { data, error } = await authClient.signUp.email({
+    name: username , // required
+    email: email , // required
+    password: password , // required
+  
+    callbackURL: "/",
+});
+  
+
+
   }
 
-
+ 
   return (
     <div className='flex justify-center items-center'>
       <form  onSubmit={Handlesignup}>

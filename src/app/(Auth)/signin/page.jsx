@@ -1,15 +1,31 @@
 'use client'
 
 import React from 'react'
+import { authClient } from '../../../lib/auth-client'
 
 function Signinpage () {
  
-  const Handlesignin = (e) => {
+  const Handlesignin = async (e) => {
      e.preventDefault()
      const form = e.target
      const email = form.email.value
      const password = form.password.value
      console.log(email , password)
+
+
+
+
+
+     const { data, error } = await authClient.signIn.email({
+    email: email , // required
+    password: password , // required
+    rememberMe: true,
+    callbackURL: "/",
+});  
+
+
+
+
   }
   return (
     <div className='flex justify-center items-center'>
