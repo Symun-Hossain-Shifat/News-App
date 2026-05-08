@@ -10,7 +10,7 @@ function Middlebar ({Newdata}) {
         <h1 className="text-xl font-semibold">All News</h1>
       <div className="flex flex-col space-y-2 p-3">
        {Newdata.length > 0 ? (Newdata.map( (Data , index) => {
-        console.log(Data)
+        // console.log(Data)
           return (
             <div key={index} className=" bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition duration-300">
       

@@ -8,7 +8,7 @@ export default async function Home() {
   const res = await fetch('https://openapi.programming-hero.com/api/news/categories');
   const Datas = await res.json();
   const Data = Datas.data.news_category;
- console.log(Data) 
+//  console.log(Data) 
 
 
  const NewRes = await fetch(`https://openapi.programming-hero.com/api/news/category/${'08'}`);

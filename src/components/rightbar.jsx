@@ -1,18 +1,30 @@
+'use client'
+
+
+
+
 import Image from 'next/image'
 import room from '@/assets/room.png'
 import { BsGithub } from 'react-icons/bs'
 import { FaGoogle } from 'react-icons/fa'
 import swimming from '@/assets/swimming.png'
 import playground from '@/assets/playground.png'
+import { authClient } from '@/lib/auth-client'
 
 
 
 function Rightbar () {
+  
+  const handlegoogle = async() => {
+    const data = await authClient.signIn.social({
+    provider: "google",
+  });
+  }
   return (
     <div className="md:sticky md:top-20 md:z-50 flex flex-col bg-white items-center justify-center">
         <h1 className="text-xl font-semibold">Login With </h1>
         <div className='flex flex-col gap-2 my-4'>
-            <button className="btn bg-white text-blue-500 border-blue-500">
+            <button className="btn bg-white text-blue-500 border-blue-500" onClick={handlegoogle}>
                  <FaGoogle />   
                         Login with Google
                 </button> 
